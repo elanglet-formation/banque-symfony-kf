@@ -62,6 +62,15 @@ class Client
      * @ORM\Column(name="motdepasse", type="string", length=200, nullable=false)
      */
     private $motdepasse;
+    
+    
+    // A rajouter pour pouvoir faire les tests
+    public function setId(int $id): self
+    {
+        $this->id = $id;
+        
+        return $this;
+    }
 
     public function getId(): ?int
     {
